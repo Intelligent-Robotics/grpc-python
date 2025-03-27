@@ -1,0 +1,21 @@
+syntax = "proto3";
+package calculator;
+
+service Calculator {
+  rpc CalcSum (ValuesInput) returns (CalcOutput);
+
+}
+
+message ValuesInput {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message CalcOutput {
+  int32 sum = 1;
+}
+
+
+
+// python3 -m grpc_tools.protoc -I protos --python_out=./python --grpc_python_out=./python protos/calculate.proto 
+

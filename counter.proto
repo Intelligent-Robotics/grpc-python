@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package counter;
+
+service Counter {
+    rpc AddOne (Count) returns (Count);
+}
+
+message Count {
+    int32 value = 1;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+service MultiplesOf {
+  rpc CheckAll (stream Number) returns (stream Number);
+}
+
+message Number {
+  int64 value = 1;
+}
